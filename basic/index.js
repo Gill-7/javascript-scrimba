@@ -1,2 +1,4 @@
 var header  = document.getElementById("header");
-header.style.fontSize = '30px';
+header.style.color = 'green';
+header.style.fontSize = "20px";
+header.style.background = 'pink';
