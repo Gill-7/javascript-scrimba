@@ -1,6 +1,9 @@
+const squares = Array.from(document.querySelectorAll('.grid div'))
 
-
-var list = ['Larry', 'Joe', 'Mark'];
-console.log(list[2] + ' - Joined 1st');
-console.log(list[1] + ' - Joined 3rd');
-console.log(list[0] + ' - Joined 2nd');
+for (i = 0; i <= squares.length; i++){
+    if(i % 2 === 0){
+        squares[i].classList.add('even')
+    } else {
+        squares[i].classList.add('odd')
+    }
+}
