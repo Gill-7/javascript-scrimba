@@ -1,0 +1,27 @@
+body {
+    background-color: #FFABAB;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    margin-top: 50px;
+    width: 284.5px;
+    height: 284.5px;
+    border: solid white 8px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 30px;
+    height: 30px;
+    border: solid white 0.5px;
+}
+.even {
+    background-color: #2b9348
+}
+.odd {
+    background-color: #80b918;
+}
