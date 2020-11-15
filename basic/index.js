@@ -1,26 +1,23 @@
-const squares = Array.from(document.querySelectorAll('.grid div'))
+const robot = document.querySelector('.robot')
 
+function moveRobot() {
+    robot.style.left = '150px';
+    if(robot.style.left === '150px'){
+        function bottomRobot() {
+            robot.style.bottom = '250px';
 
-const layout = [
-    '','','','','','','','','','','','','',
-    '','','','','','','','','','','','','',
-    '','','L','','','','','','','','','','',
-    '','','E','S','S','E','N','T','I','A','L','','',
-    '','','A','','','','','','','','','','',
-    '','','R','E','A','C','T','','','','','','',
-    '','','N','','','','','','','','','','',
-    '','','I','','','','','','','','','','',
-    '','','N','','','','','','','','','','',
-    '','','G','','','','','','','','','','',
-    '','','','','','','','','','','','','',
-    '','','','','','','','','','','','','',
-    '','','','','','','','','','','','','',
-]
-
-for(let i = 0; i < squares.length; i++) {
-    let letter = layout[i]
-    squares[i].innerHTML = letter
-    if(letter !== ''){
-        squares[i].classList.add('tile')
+            if(robot.style.bottom === '250px') {
+                function topRobot() {
+                    robot.style.top = '0px'
+                    robot.style.left = '0px';
+                }
+                robot.addEventListener('click', topRobot)
+            }
+        }
+        robot.addEventListener('click', bottomRobot)
     }
 }
+
+
+robot.addEventListener('click', moveRobot)
+

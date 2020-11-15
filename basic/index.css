@@ -1,31 +1,73 @@
 body {
-    background-color: #ACE7FF;
+    background-color: #008000;
+}
+
+.robot {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 150px;
+    
+}
+
+.antenna {
+    margin-left: 51.5px;
+    width: 5px;
+    height: 40px;
+    background-color: #ccff33;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.head {
+    margin-left: 2.5px;
+    height:50px;
+    width:105px;
+    background-color: #ccff33;
+    border-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
-.grid {
-    margin-top: 30px;
-    width: 411px;
-    height: 416px;
-    border: solid white 8px;
-    border-radius: 5px;
+.mask {
+    margin-top: 12.5px;
+    height:25px;
+    width:75px;
+    background-color:#004b23;
+    border-radius: 12.5px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.grid div {
-    width: 30px;
-    height: 30px;
-    border: solid white 0.5px;
-    text-align: center;
-    font-size: 24px;
+.eye {
+    margin: 4.5px 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #70e000;
+    border-radius: 8px;
 }
 
-.triple {
-    background-color: #FFBEBC;
+.torso {
+    margin-top: 12px;
+    background-color:#ccff33;
+    width: 110px;
+    height: 100px;
+    border-radius: 25px 25px 50px 50px;
 }
 
-.tile {
-    background-color: #FFF5BA;
+.text {
+    display: flex;
+    flex-direction: column;
 }
+.text1 {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 32px;
+    margin: 0 0 0 0;
+}
+.text2 {
+    padding-top: 0px;
+    margin: 0 0 0 0;
+    padding-left: 20px;
+}
+
+
+  
