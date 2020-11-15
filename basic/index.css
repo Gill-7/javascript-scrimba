@@ -1,15 +1,15 @@
 body {
-    background-color: #FFABAB;
+    background-color: #ACE7FF;
     display: flex;
     justify-content: center;
 }
 
 .grid {
-    margin-top: 50px;
-    width: 284.5px;
-    height: 284.5px;
+    margin-top: 30px;
+    width: 411px;
+    height: 416px;
     border: solid white 8px;
-    border-radius: 2px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -18,10 +18,14 @@ body {
     width: 30px;
     height: 30px;
     border: solid white 0.5px;
+    text-align: center;
+    font-size: 24px;
 }
-.even {
-    background-color: #2b9348
+
+.triple {
+    background-color: #FFBEBC;
 }
-.odd {
-    background-color: #80b918;
+
+.tile {
+    background-color: #FFF5BA;
 }
