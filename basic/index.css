@@ -1,73 +1,61 @@
+html {
+    height: 100vh;
+    font-family: Baloo;
+    letter-spacing: 2px;
+}
 body {
-    background-color: #008000;
+    margin: 10px;
+    padding: 10px;
+    background-image: linear-gradient(#5DA4D9, #FFF);
 }
 
-.robot {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 150px;
-    
+ 
+#dogs {
+font-size: 60px;
+margin: 40px;
+text-align: center;
 }
 
-.antenna {
-    margin-left: 51.5px;
-    width: 5px;
-    height: 40px;
-    background-color: #ccff33;
-    border-radius: 2px 2px 0px 0px;
+.dog {
+    margin: 10px;
 }
 
-.head {
-    margin-left: 2.5px;
-    height:50px;
-    width:105px;
-    background-color: #ccff33;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center; 
+#push-btn,#unshift-btn {
+    background-color: #2b8129;
 }
 
-.mask {
-    margin-top: 12.5px;
-    height:25px;
-    width:75px;
-    background-color:#004b23;
-    border-radius: 12.5px;
-    display: flex;
-    justify-content: space-between;
+#shift-btn, #pop-btn {
+    background-color: #E23349;
 }
 
-.eye {
-    margin: 4.5px 10px;
-    width: 16px;
-    height: 16px;
-    background-color: #70e000;
+h1 {
+    text-align: center;
+    color: white;
+}
+
+input {
+    margin: 0 auto;
+    display: block;
+    border: none;
+    height: 30px;
+    background: white;
     border-radius: 8px;
+    text-align: center;
 }
 
-.torso {
-    margin-top: 12px;
-    background-color:#ccff33;
-    width: 110px;
-    height: 100px;
-    border-radius: 25px 25px 50px 50px;
+button {
+    font-family: Baloo;
+    letter-spacing: px;
+    background: darkcyan;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 5px;
 }
 
-.text {
+.buttons-wrapper {
     display: flex;
-    flex-direction: column;
-}
-.text1 {
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-left: 32px;
-    margin: 0 0 0 0;
-}
-.text2 {
-    padding-top: 0px;
-    margin: 0 0 0 0;
-    padding-left: 20px;
-}
-
-
-  
+    justify-content: center;
+    margin: 10px 0 40px;
+}  
