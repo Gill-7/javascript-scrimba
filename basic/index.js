@@ -1,23 +1,49 @@
-const robot = document.querySelector('.robot')
+const myDogs = ["Lucky", "Max", "Buddy"]
 
-function moveRobot() {
-    robot.style.left = '150px';
-    if(robot.style.left === '150px'){
-        function bottomRobot() {
-            robot.style.bottom = '250px';
+function renderDogs() {
+    const dogContainer = document.getElementById('dog-container')
 
-            if(robot.style.bottom === '250px') {
-                function topRobot() {
-                    robot.style.top = '0px'
-                    robot.style.left = '0px';
-                }
-                robot.addEventListener('click', topRobot)
-            }
-        }
-        robot.addEventListener('click', bottomRobot)
+    dogContainer.innerHTML = ''
+    for (let i=0; i<myDogs.length; i++) {
+        const dog = document.createElement('div')
+        dog.style.textAlign = 'center';
+        dog.style.marginBottom = '10px'; 
+        dog.textContent = myDogs[i]   
+        dogContainer.append(dog)
     }
 }
 
+renderDogs()
 
-robot.addEventListener('click', moveRobot)
+const pushBtn = document.getElementById('push-btn')
+pushBtn.addEventListener('click', function() {
+    const dogInput = document.getElementById('dog-input')
+    if(dogInput.value) {
+        myDogs.push(dogInput.value)
+        dogInput.value = ''
+        renderDogs()
+    }
+})
 
+const unshiftBtn = document.getElementById('unshift-btn')
+unshiftBtn.addEventListener('click', function() {
+    const dogInput = document.getElementById('dog-input')
+    if(dogInput.value) {
+        myDogs.unshift(dogInput.value)
+        dogInput.value = ''
+        renderDogs()
+    }
+})
+
+
+const popBtn = document.getElementById('pop-btn')
+popBtn.addEventListener('click', function() {
+    myDogs.pop()
+    renderDogs()
+})
+
+const shiftBtn = document.getElementById('shift-btn')
+shiftBtn.addEventListener('click', function() {
+    myDogs.shift()
+    renderDogs()
+})

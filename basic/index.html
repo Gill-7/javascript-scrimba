@@ -1,21 +1,18 @@
 <html>
     <title>Javascipt</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
     <body>
-        <div class="robot">
-            <div class="antenna"></div>
-            <div class="head">
-                <div class="mask">
-                    <div class="eye"></div>
-                    <div class="eye"></div>
-                </div>
-            </div>
-            <div class="torso">
-                <div class='text'>
-                    <h3 class='text1'>Hey!</h3>
-                    <h3 class='text2'>Click Me</h3>
-                </div>
-            </div>
+        <h1>Dogs Name</h1>
+        <div id="dog-container"></div>
+        <input type='text' id='dog-input' placeholder='type on dog name' >
+        <div class='buttons-wrapper'>
+            <button id='push-btn'>Add to end</button>
+            <button id='unshift-btn'>Add to beginning</button>
+        </div>
+        <div class="buttons-wrapper">
+            <button id="pop-btn">Remove to end</button>
+            <button id="shift-btn">Remove to beginning</button>
         </div>
         <script src="index.js"></script>
     </body>
