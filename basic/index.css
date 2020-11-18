@@ -1,61 +1,67 @@
-html {
-    height: 100vh;
-    font-family: Baloo;
-    letter-spacing: 2px;
-}
 body {
-    margin: 10px;
-    padding: 10px;
-    background-image: linear-gradient(#5DA4D9, #FFF);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    display: grid;
+    justify-content: center;
+}
+
+.title {
+    color: #16687A;
+    margin-bottom: 1em;
+}
+.entry-textbox {
+    background-color: #1d3557;
+    width: 20em;
+    height: 10em;
+    font-size: 20px;
+    padding: 1em;
+    border-radius: 25px;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.entry-textbox:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+.button {
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    text-align: right;
+    border: unset;
+    color: white;
+    background-color: black;
+    margin-left: 70%;
+}
+
+#entries {
+    background-color: #16697A;
+    color: #EDE7E3;
+    border-radius: 25px;
+    font-family: cursive;
+    margin-top: 1em;
+    height: 5em;
+    width: 25em;
+    border: unset;
+}
+
+
+.entries-nav {
+    padding-bottom: 1em;
+}
+
+.display-entry-button {
+    margin: 0.2em;
+}
+
+.display-entry-button:hover {
+    cursor: pointer;
 }
 
  
-#dogs {
-font-size: 60px;
-margin: 40px;
-text-align: center;
-}
-
-.dog {
-    margin: 10px;
-}
-
-#push-btn,#unshift-btn {
-    background-color: #2b8129;
-}
-
-#shift-btn, #pop-btn {
-    background-color: #E23349;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-}
-
-input {
-    margin: 0 auto;
-    display: block;
-    border: none;
-    height: 30px;
-    background: white;
-    border-radius: 8px;
-    text-align: center;
-}
-
-button {
-    font-family: Baloo;
-    letter-spacing: px;
-    background: darkcyan;
-    color: white;
-    border: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin: 0 5px;
-}
-
-.buttons-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0 40px;
-}  
