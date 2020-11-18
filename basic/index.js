@@ -1,49 +1,33 @@
-const myDogs = ["Lucky", "Max", "Buddy"]
+const entriesSection = document.querySelector('#entries')
+const entryTextbox = document.querySelector('.entry-textbox')
+const entryForm = document.getElementById('entryForm') 
+const entriesNav = document.querySelector('.entries-nav')
 
-function renderDogs() {
-    const dogContainer = document.getElementById('dog-container')
+let count = 1;
+function addEntryToDom(event) {
+    event.preventDefault();
+    const entryDiv = document.createElement('div');
+    entryDiv.className = 'single-entry';
+    entryDiv.innerText = entryTextbox.value;
+    entryDiv.style.display = 'none';
+    entriesSection.appendChild(entryDiv);
+    entryTextbox.value = '';
 
-    dogContainer.innerHTML = ''
-    for (let i=0; i<myDogs.length; i++) {
-        const dog = document.createElement('div')
-        dog.style.textAlign = 'center';
-        dog.style.marginBottom = '10px'; 
-        dog.textContent = myDogs[i]   
-        dogContainer.append(dog)
-    }
+    const displayEntryButton = document.createElement('button')
+    displayEntryButton.className = 'display-entry-button';
+    displayEntryButton.innerText = count++;
+    entriesNav.appendChild(displayEntryButton)
+
+
+    displayEntryButton.addEventListener('click', function() {
+
+        const allEntries = document.querySelectorAll('.single-entry');
+        for(let i=0; i < allEntries.length; i++) {
+            allEntries[i].style.display = 'none';
+        }
+        entryDiv.style.display = 'block';
+    })
+
 }
 
-renderDogs()
-
-const pushBtn = document.getElementById('push-btn')
-pushBtn.addEventListener('click', function() {
-    const dogInput = document.getElementById('dog-input')
-    if(dogInput.value) {
-        myDogs.push(dogInput.value)
-        dogInput.value = ''
-        renderDogs()
-    }
-})
-
-const unshiftBtn = document.getElementById('unshift-btn')
-unshiftBtn.addEventListener('click', function() {
-    const dogInput = document.getElementById('dog-input')
-    if(dogInput.value) {
-        myDogs.unshift(dogInput.value)
-        dogInput.value = ''
-        renderDogs()
-    }
-})
-
-
-const popBtn = document.getElementById('pop-btn')
-popBtn.addEventListener('click', function() {
-    myDogs.pop()
-    renderDogs()
-})
-
-const shiftBtn = document.getElementById('shift-btn')
-shiftBtn.addEventListener('click', function() {
-    myDogs.shift()
-    renderDogs()
-})
+entryForm.addEventListener('submit', addEntryToDom)
