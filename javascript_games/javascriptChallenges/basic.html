@@ -2,15 +2,22 @@
     <title>Javascript</title>
     <link rel='stylesheet' href='basic.css'></link>
     <body>
-        <div id='overlay'>
-            <div id='modal'>
-                <h2>Contact Details</h2>
-                <p>Homer Simpson, 742 Evergreen Terrace (no spam please!)</p>
-                <button id='close-modal'>Close!</button>
+        <div id='container'>
+            <div id='main'>
+                <label for='search-input'><h2>Search Users</h2></label>
+                <input id='input' type='text' placeholder='text goes here'>
             </div>
-        </div>
-        <h1>Click to revel Homer's contact details!</h1>
-        <button id='open-modal'>Contact Me</button>
+        <ul id="results">
+            <li class="name">Karl</li>
+            <li class="name">Per</li>
+            <li class="name">Katie</li>
+            <li class="name">Lupe</li>
+            <li class="name">Katherine</li>
+            <li class="name">Kelly</li>
+            <li class="name">Kurt</li>
+            <li class="name">Fred</li>
+        </ul>
+    </div>
         <script src='basic.js'></script>
     </body>
 </html>
