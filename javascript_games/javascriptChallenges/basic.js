@@ -1,13 +1,14 @@
-var openModal = document.getElementById('open-modal')
-
-openModal.addEventListener('click', function() {
-    var overLay = document.getElementById('overlay')
-    overLay.style.display = 'block';
-})
-
-var closeModal = document.getElementById('close-modal')
-
-closeModal.addEventListener('click', function() {
-    var close = document.getElementById('overlay')
-    close.style.display = 'none';
+var inputValue = document.getElementById('input')
+inputValue.addEventListener('keyup', function(e) {
+    let searchQuery = e.target.value.toLowerCase();
+    let nameValues = document.getElementsByClassName('name')
+    for(let i=0; i < nameValues.length; i++) {
+        const currentName = nameValues[i].textContent.toLowerCase();
+        
+        if(currentName.includes(searchQuery)) {
+            nameValues[i].style.display = 'block';
+        } else {
+            nameValues[i].style.display = 'none'
+        }
+    }
 })
