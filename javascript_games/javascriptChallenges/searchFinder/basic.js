@@ -1,3 +1,4 @@
+
 var inputValue = document.getElementById('input')
 inputValue.addEventListener('keyup', function(e) {
     let searchQuery = e.target.value.toLowerCase();
